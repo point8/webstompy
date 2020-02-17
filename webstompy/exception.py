@@ -34,7 +34,7 @@ class NoDestinationException(WebstompyException):
     """
 
     def __init__(self):
-        self.message = 'No destination specified!'
+        self.message = "No destination specified!"
 
 
 class NoIdException(WebstompyException):
@@ -43,4 +43,4 @@ class NoIdException(WebstompyException):
     """
 
     def __init__(self):
-        self.message = 'No id specified!'
+        self.message = "No id specified!"

@@ -39,6 +39,7 @@ class WebSocketPinger(threading.Thread):
     """Helper class for WebSocketTransporter to to regular WebSocket pings as
     connection keepalive.
     """
+
     def __init__(self, socket):
         threading.Thread.__init__(self)
         self.socket = socket
@@ -69,7 +70,8 @@ class WebSocketTransporter(BaseTransporter):
         except WebSocketConnectionClosedException:
             self._alive = False
             raise webstompy.exception.ConnectionClosedException(
-                'Connection closed unexpectedly!')
+                "Connection closed unexpectedly!"
+            )
         except websocket.WebSocketException:
             self.socket = None
             raise

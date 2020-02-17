@@ -4,7 +4,7 @@
 import logging
 
 
-def get_logger(name='webstompy'):
+def get_logger(name="webstompy"):
     """Internal function to get logger for module
 
     This function returns a logger for classes and functions inside this
@@ -28,9 +28,10 @@ def get_logger(name='webstompy'):
         logger.setLevel(logging.INFO)
         handler = logging.StreamHandler()
         formatter = logging.Formatter(
-            '%(asctime)s - %(levelname)-8s - %(message)s '
-            '[%(name)s/%(funcName)s | %(threadName)s (PID:%(process)d)]',
-            datefmt='%H:%M:%S')
+            "%(asctime)s - %(levelname)-8s - %(message)s "
+            "[%(name)s/%(funcName)s | %(threadName)s (PID:%(process)d)]",
+            datefmt="%H:%M:%S",
+        )
         handler.setFormatter(formatter)
         logger.addHandler(handler)
     return logger

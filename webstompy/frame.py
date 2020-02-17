@@ -25,32 +25,39 @@ class StompFrame(object):
     def __init__(self, command=None, header=None, message=None, payload=None):
         # TODO: Add __str__ and __repr__ members
         if command is not None:
-            self._command = command.encode('UTF-8')
+            self._command = command.encode("UTF-8")
         else:
             self._command = None
         if header is not None:
-            self._header = [(entry[0].encode('UTF-8'),
-                             entry[1].encode('UTF-8')) for entry in header]
+            self._header = [
+                (entry[0].encode("UTF-8"), entry[1].encode("UTF-8"))
+                for entry in header
+            ]
         else:
             self._header = None
         if message is not None:
-            self._message = message.encode('UTF-8')
+            self._message = message.encode("UTF-8")
         else:
             self._message = None
         if payload is not None:
             lines = payload.splitlines()
             self._command = lines[0]
-            self._header = [tuple(entry.split(b':')) for entry in
-                            lines[1:lines.index(b'')]]
-            self._message = b'\n'.join(lines[lines.index(b'') + 1:])[:-1]
+            self._header = [
+                tuple(entry.split(b":"))
+                for entry in lines[1 : lines.index(b"")]
+            ]
+            self._message = b"\n".join(lines[lines.index(b"") + 1 :])[:-1]
 
     def __repr__(self):
-        s_headers = [option[0].decode("utf-8") + ':' +
-                     option[1].decode("utf-8")
-                     for option in self._header].__repr__()
-        s_repr = f'<StompFrame: command="{self._command.decode("utf-8")}", ' \
-            f'headers="{s_headers}", ' \
+        s_headers = [
+            option[0].decode("utf-8") + ":" + option[1].decode("utf-8")
+            for option in self._header
+        ].__repr__()
+        s_repr = (
+            f'<StompFrame: command="{self._command.decode("utf-8")}", '
+            f'headers="{s_headers}", '
             f'message="{self._message}">'
+        )
         return s_repr
 
     @property
@@ -83,13 +90,12 @@ class StompFrame(object):
         """
         payload = [
             self._command,
-            b'\n'.join([entry[0] + b':' + entry[1]
-                       for entry in self._header]),
-            b''
+            b"\n".join([entry[0] + b":" + entry[1] for entry in self._header]),
+            b"",
         ]
         if self._message is not None:
             payload.append(self._message)
-        payload_str = b'\n'.join(payload)
+        payload_str = b"\n".join(payload)
         # payload_str.encode('UTF-8')
-        payload_str += b'\n\0'
+        payload_str += b"\n\0"
         return payload_str
