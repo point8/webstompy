@@ -4,15 +4,13 @@ webstompy: A simple Python STOMP implementation with WebSocket support
 
 This is webstompy, your friendly Python STOMP interface with WebSocket support. Currently, it supports [version 1.1 of the STOMP specification](https://stomp.github.io/stomp-specification-1.1.html).
 
-**Current release:** |version| (|today|)
-
 *Note: webstompy may not be feature-complete or respect the STOMP specification in full detail. It merely suffices our requirements. In case you observe non-standard behavior or missing functionality, feel free to leave an issue in the tracker or provide a pull request.*
 
 webstompy is aimed at simplicity of usage.
 
 ## Documentation
 
-* 💾 `Code repository <https://github.com/point8/webstompy>`_
+* 💾 [Code repository](https://github.com/point8/webstompy)
 * This README file contains some basic documentation for installation and development.
 * :books: **[Project documentation](https://webstompy.readthedocs.io)**
 * :bug: **For bug reports and feature requests use the [issue tracker](https://github.com/point8/webstompy/issues)**
