@@ -1,5 +1,11 @@
 # webstompy
 
+<p align="center">
+<a href='https://webstompy.readthedocs.io/en/latest/?badge=latest'><img src='https://readthedocs.org/projects/webstompy/badge/?version=latest' alt='Documentation Status' /></a>
+<a href="https://github.com/point8/webstompy/blob/master/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blueviolet"></a>
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+</p>
+
 This is webstompy, your friendly Python STOMP interface with WebSocket support. Currently, it supports [version 1.1 of the STOMP specification](https://stomp.github.io/stomp-specification-1.1.html).
 
 *Note: webstompy may not be feature-complete or respect the STOMP specification in full detail. It merely suffices our requirements. In case you observe non-standard behavior or missing functionality, feel free to leave an issue in the tracker or provide a pull request.*
