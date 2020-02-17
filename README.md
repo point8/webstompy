@@ -57,3 +57,7 @@ docker run -d --name rabbit-stomp -p 15674:15674 beevelop/rabbitmq-stomp
 ```
 
 Your RabbitMQ server WebSocket will listen on port 15674 and be available via <http://127.0.0.1:15674/stomp>.
+
+## License
+
+[MIT License](LICENSE), Copyright (c) 2020 Point 8 GmbH
