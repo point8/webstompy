@@ -9,9 +9,9 @@ webstompy is aimed at simplicity of usage.
 ## Documentation
 
 * 💾 [Code repository](https://github.com/point8/webstompy)
-* This README file contains some basic documentation for installation and development.
-* :books: **[Project documentation](https://webstompy.readthedocs.io)**
-* :bug: **For bug reports and feature requests use the [issue tracker](https://github.com/point8/webstompy/issues)**
+* 🔍 This README file contains some basic documentation for installation and development.
+* 📚 **[Project documentation](https://webstompy.readthedocs.io)**
+* 🐛 **For bug reports and feature requests use the [issue tracker](https://github.com/point8/webstompy/issues)**
 
 ## Usage
 
