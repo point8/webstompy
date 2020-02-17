@@ -1,6 +1,4 @@
-**********************************************************************
-webstompy: A simple Python STOMP implementation with WebSocket support
-**********************************************************************
+# webstompy
 
 This is webstompy, your friendly Python STOMP interface with WebSocket support. Currently, it supports [version 1.1 of the STOMP specification](https://stomp.github.io/stomp-specification-1.1.html).
 
